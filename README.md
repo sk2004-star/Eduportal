@@ -1,2 +1,23 @@
-# Eduportal
-EduPortal is a modern cloud-based Learning Management System (LMS) built with HTML, CSS, JavaScript and Firebase. It enables teachers to upload notes, create assignments, manage students and publish marks, while students can access study materials, track progress and submit assignments online.
+🎓 EduPortal
+
+EduPortal is a cloud-based education management platform designed for teachers and students.
+
+✨ Features
+• Firebase Authentication
+• Teacher Dashboard
+• Student Dashboard
+• Notes Upload & Sharing
+• Assignment Management
+• Marks Management
+• Dark Mode
+• Responsive Design
+
+🛠 Technologies Used
+• HTML5
+• CSS3
+• JavaScript (ES6)
+• Firebase Authentication
+• Cloud Firestore
+
+👨‍💻 Developed By
+SK Imamuddin
