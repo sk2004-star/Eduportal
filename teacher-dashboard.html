@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Teacher Dashboard</title>
+<title>EduPortal Teacher Dashboard</title>
 
 <link rel="stylesheet" href="css/dashboard.css">
-
 </head>
 
 <body id="top">
 
+<!-- Sidebar -->
+
 <div class="sidebar">
 
-    <h2>EduPortal</h2>
+    <h2>🎓 EduPortal</h2>
 
     <div class="profile-box">
 
@@ -23,42 +23,30 @@
             Loading...
         </p>
 
-        <span>
-            Teacher
-        </span>
+        <span>Teacher Panel</span>
 
     </div>
 
     <ul>
 
         <li>
-            <a href="#notesSection">
-                📚 Notes
-            </a>
+            <a href="#top">🏠 Dashboard</a>
         </li>
 
         <li>
-            <a href="#assignmentSection">
-                📝 Assignments
-            </a>
+            <a href="#notesSection">📚 Notes</a>
         </li>
 
         <li>
-            <a href="#studentSection">
-                👨‍🎓 Students
-            </a>
+            <a href="#assignmentSection">📝 Assignments</a>
         </li>
 
         <li>
-            <a href="#submissionSection">
-                📄 Submissions
-            </a>
+            <a href="#studentSection">👨‍🎓 Students</a>
         </li>
 
         <li>
-            <a href="#top">
-                👨‍🏫 Teacher
-            </a>
+            <a href="#submissionSection">📄 Submissions</a>
         </li>
 
     </ul>
@@ -68,29 +56,33 @@
     </button>
 
     <button id="logoutBtn">
-        Logout
+        🚪 Logout
     </button>
 
 </div>
+
+<!-- Main Content -->
 
 <div class="main-content">
 
     <h1>Teacher Dashboard</h1>
 
+    <!-- Stats -->
+
     <div class="stats">
 
         <div class="card">
-            <p>Notes</p>
+            <p>Total Notes</p>
             <h2 id="noteCount">0</h2>
         </div>
 
         <div class="card">
-            <p>Assignments</p>
+            <p>Total Assignments</p>
             <h2 id="assignmentCount">0</h2>
         </div>
 
         <div class="card">
-            <p>Students</p>
+            <p>Total Students</p>
             <h2 id="studentCount">0</h2>
         </div>
 
@@ -101,9 +93,11 @@
 
     </div>
 
-    <hr>
+    <!-- Upload Notes -->
 
-    <h2 id="notesSection">Upload Notes</h2>
+    <h2 id="notesSection">
+        📚 Upload Notes
+    </h2>
 
     <form id="uploadForm">
 
@@ -131,16 +125,18 @@
 
     </form>
 
-    <hr>
-
-    <h2>Uploaded Notes</h2>
+    <h2>
+        📖 Uploaded Notes
+    </h2>
 
     <div id="uploadedNotes"></div>
 
     <hr>
 
+    <!-- Assignment -->
+
     <h2 id="assignmentSection">
-        Create Assignment
+        📝 Create Assignment
     </h2>
 
     <form id="assignmentForm">
@@ -174,24 +170,28 @@
 
     </form>
 
-    <hr>
-
-    <h2>Assignments</h2>
+    <h2>
+        📋 Assignments
+    </h2>
 
     <div id="assignmentsContainer"></div>
 
     <hr>
 
+    <!-- Students -->
+
     <h2 id="studentSection">
-        Student Management
+        👨‍🎓 Student Management
     </h2>
 
     <div id="studentsContainer"></div>
 
     <hr>
 
+    <!-- Submissions -->
+
     <h2 id="submissionSection">
-        Student Submissions
+        📄 Student Submissions
     </h2>
 
     <div id="submissionsContainer">
@@ -205,19 +205,12 @@
 </div>
 
 <script type="module" src="js/teacher-protect.js"></script>
-
 <script type="module" src="js/profile.js"></script>
-
 <script type="module" src="js/counter.js"></script>
-
 <script type="module" src="js/upload.js"></script>
-
 <script type="module" src="js/assignment.js"></script>
-
 <script type="module" src="js/student-management.js"></script>
-
 <script type="module" src="js/logout.js"></script>
-
 <script src="js/darkmode.js"></script>
 
 </body>
