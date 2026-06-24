@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,198 +8,237 @@
 <title>EduPortal Teacher Dashboard</title>
 
 <link rel="stylesheet" href="css/dashboard.css">
+
 </head>
 
-<body id="top">
-
-<!-- Sidebar -->
+<body>
 
 <div class="sidebar">
 
     <h2>🎓 EduPortal</h2>
 
     <div class="profile-box">
-
-        <p id="teacherEmail">
-            Loading...
-        </p>
-
+        <p id="teacherEmail">Loading...</p>
         <span>Teacher Panel</span>
-
     </div>
 
     <ul>
-
-        <li>
-            <a href="#top">🏠 Dashboard</a>
-        </li>
-
-        <li>
-            <a href="#notesSection">📚 Notes</a>
-        </li>
-
-        <li>
-            <a href="#assignmentSection">📝 Assignments</a>
-        </li>
-
-        <li>
-            <a href="#studentSection">👨‍🎓 Students</a>
-        </li>
-
-        <li>
-            <a href="#submissionSection">📄 Submissions</a>
-        </li>
-
+        <li><a href="#dashboard">🏠 Dashboard</a></li>
+        <li><a href="#notesSection">📚 Upload Notes</a></li>
+        <li><a href="#assignmentSection">📝 Assignments</a></li>
+        <li><a href="#studentSection">👨‍🎓 Students</a></li>
+        <li><a href="#submissionSection">📄 Submissions</a></li>
     </ul>
 
-    <button id="darkBtn">
-        🌙 Dark Mode
-    </button>
-
-    <button id="logoutBtn">
-        🚪 Logout
-    </button>
+    <button id="darkBtn">🌙 Dark Mode</button>
+    <button id="logoutBtn">🚪 Logout</button>
 
 </div>
 
-<!-- Main Content -->
+<div class="main-content" id="dashboard">
 
-<div class="main-content">
+    <!-- TOP BAR -->
 
-    <h1>Teacher Dashboard</h1>
+    <div class="topbar">
 
-    <!-- Stats -->
+        <div>
+            <h1>Teacher Dashboard</h1>
+            <p>Manage Students, Notes & Assignments Easily</p>
+        </div>
+
+        <div class="welcome-card">
+            <h3>Welcome Back 👋</h3>
+            <p id="teacherEmailTop">Teacher Panel</p>
+        </div>
+
+    </div>
+
+    <!-- STATS -->
 
     <div class="stats">
 
-        <div class="card">
+        <div class="card blue-card">
             <p>Total Notes</p>
             <h2 id="noteCount">0</h2>
         </div>
 
-        <div class="card">
+        <div class="card green-card">
             <p>Total Assignments</p>
             <h2 id="assignmentCount">0</h2>
         </div>
 
-        <div class="card">
+        <div class="card orange-card">
             <p>Total Students</p>
             <h2 id="studentCount">0</h2>
         </div>
 
-        <div class="card">
+        <div class="card red-card">
             <p>Submissions</p>
             <h2 id="submissionCount">0</h2>
         </div>
 
     </div>
 
-    <!-- Upload Notes -->
+    <!-- QUICK ACTIONS -->
 
-    <h2 id="notesSection">
-        📚 Upload Notes
-    </h2>
+    <div class="quick-actions">
 
-    <form id="uploadForm">
+        <div class="action-card">
+            <h3>📚 Notes</h3>
+            <p>Upload & Manage Study Notes</p>
+        </div>
 
-        <input
-        type="text"
-        id="title"
-        placeholder="Note Title"
-        required>
+        <div class="action-card">
+            <h3>📝 Assignments</h3>
+            <p>Create & Manage Assignments</p>
+        </div>
 
-        <input
-        type="text"
-        id="subject"
-        placeholder="Subject"
-        required>
+        <div class="action-card">
+            <h3>👨‍🎓 Students</h3>
+            <p>View Registered Students</p>
+        </div>
 
-        <input
-        type="url"
-        id="pdfUrl"
-        placeholder="Google Drive PDF Link"
-        required>
+        <div class="action-card">
+            <h3>📄 Submissions</h3>
+            <p>Check Assignment Submissions</p>
+        </div>
 
-        <button type="submit">
-            Upload Note
-        </button>
+    </div>
 
-    </form>
+    <!-- FORMS -->
 
-    <h2>
-        📖 Uploaded Notes
-    </h2>
+    <div class="dashboard-grid">
 
-    <div id="uploadedNotes"></div>
+        <div class="dashboard-box">
 
-    <hr>
+            <h2 id="notesSection">
+                📚 Upload Notes
+            </h2>
 
-    <!-- Assignment -->
+            <form id="uploadForm">
 
-    <h2 id="assignmentSection">
-        📝 Create Assignment
-    </h2>
+                <input
+                type="text"
+                id="title"
+                placeholder="Note Title"
+                required>
 
-    <form id="assignmentForm">
+                <input
+                type="text"
+                id="subject"
+                placeholder="Subject"
+                required>
 
-        <input
-        type="text"
-        id="assignmentTitle"
-        placeholder="Assignment Title"
-        required>
+                <input
+                type="url"
+                id="pdfUrl"
+                placeholder="Google Drive PDF Link"
+                required>
 
-        <input
-        type="text"
-        id="assignmentSubject"
-        placeholder="Subject"
-        required>
+                <button type="submit">
+                    Upload Note
+                </button>
 
-        <input
-        type="url"
-        id="assignmentPdf"
-        placeholder="Assignment PDF Link"
-        required>
+            </form>
 
-        <input
-        type="date"
-        id="deadline"
-        required>
+        </div>
 
-        <button type="submit">
-            Create Assignment
-        </button>
+        <div class="dashboard-box">
 
-    </form>
+            <h2 id="assignmentSection">
+                📝 Create Assignment
+            </h2>
 
-    <h2>
-        📋 Assignments
-    </h2>
+            <form id="assignmentForm">
 
-    <div id="assignmentsContainer"></div>
+                <input
+                type="text"
+                id="assignmentTitle"
+                placeholder="Assignment Title"
+                required>
 
-    <hr>
+                <input
+                type="text"
+                id="assignmentSubject"
+                placeholder="Subject"
+                required>
 
-    <!-- Students -->
+                <input
+                type="url"
+                id="assignmentPdf"
+                placeholder="Assignment PDF Link"
+                required>
 
-    <h2 id="studentSection">
-        👨‍🎓 Student Management
-    </h2>
+                <input
+                type="date"
+                id="deadline"
+                required>
 
-    <div id="studentsContainer"></div>
+                <button type="submit">
+                    Create Assignment
+                </button>
 
-    <hr>
+            </form>
 
-    <!-- Submissions -->
+        </div>
 
-    <h2 id="submissionSection">
-        📄 Student Submissions
-    </h2>
+    </div>
 
-    <div id="submissionsContainer">
+    <!-- DATA SECTION -->
 
-        <p>
-            No submissions yet.
-        </p>
+    <div class="dashboard-grid">
+
+        <div class="dashboard-box">
+
+            <h2>
+                📖 Uploaded Notes
+            </h2>
+
+            <div id="uploadedNotes"></div>
+
+        </div>
+
+        <div class="dashboard-box">
+
+            <h2>
+                📋 Assignments
+            </h2>
+
+            <div id="assignmentsContainer"></div>
+
+        </div>
+
+    </div>
+
+    <!-- STUDENTS & SUBMISSIONS -->
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-box">
+
+            <h2 id="studentSection">
+                👨‍🎓 Student Management
+            </h2>
+
+            <div id="studentsContainer"></div>
+
+        </div>
+
+        <div class="dashboard-box">
+
+            <h2 id="submissionSection">
+                📄 Student Submissions
+            </h2>
+
+            <div id="submissionsContainer">
+
+                <p>
+                    No submissions yet.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 

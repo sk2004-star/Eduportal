@@ -13,45 +13,66 @@ from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
 
 onAuthStateChanged(auth, async(user)=>{
 
-    if(user){
+```
+if(user){
 
-        const docRef =
-        doc(db,"users",user.uid);
+    const docRef =
+    doc(db,"users",user.uid);
 
-        const docSnap =
-        await getDoc(docRef);
+    const docSnap =
+    await getDoc(docRef);
 
-        if(docSnap.exists()){
+    if(docSnap.exists()){
 
-            const data =
-            docSnap.data();
+        const data =
+        docSnap.data();
 
-            const userEmail =
-            document.getElementById("userEmail");
+        const displayName =
+        data.name || data.email;
 
-            const userRole =
-            document.getElementById("userRole");
+        const userEmail =
+        document.getElementById("userEmail");
 
-            const teacherEmail =
-            document.getElementById("teacherEmail");
+        const userEmailTop =
+        document.getElementById("userEmailTop");
 
-            if(userEmail){
-                userEmail.textContent =
-                data.name || data.email;
-            }
+        const userRole =
+        document.getElementById("userRole");
 
-            if(userRole){
-                userRole.textContent =
-                data.role;
-            }
+        const teacherEmail =
+        document.getElementById("teacherEmail");
 
-            if(teacherEmail){
-                teacherEmail.textContent =
-                data.name || data.email;
-            }
+        const teacherEmailTop =
+        document.getElementById("teacherEmailTop");
 
+        if(userEmail){
+            userEmail.textContent =
+            displayName;
+        }
+
+        if(userEmailTop){
+            userEmailTop.textContent =
+            displayName;
+        }
+
+        if(userRole){
+            userRole.textContent =
+            data.role;
+        }
+
+        if(teacherEmail){
+            teacherEmail.textContent =
+            displayName;
+        }
+
+        if(teacherEmailTop){
+            teacherEmailTop.textContent =
+            displayName;
         }
 
     }
+
+}
+```
 
 });
